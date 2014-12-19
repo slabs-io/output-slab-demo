@@ -21,7 +21,6 @@ $(document).ready(function(){
 function displayChart (obj) {
 
   // this are the data sent back from the server.
-  var title           = obj.title;
   var dateCreated     = obj.created;
   var settingsObj     = obj.settings; // this is the object that is saved from the input page
   var chartData       = obj.data; // this is the slabs 'output' object
@@ -35,7 +34,7 @@ function displayChart (obj) {
 
 
   // set the page title
-  window.document.title = title;
+  window.document.title = "Sample Pie Chart";
 
   // get an array of all the series values for highcharts
   var chartSeriesArray = [];
@@ -55,7 +54,7 @@ function displayChart (obj) {
       plotShadow: false
     },
     title: {
-      text: title
+      text: "Sample Pie Chart"
     },
     tooltip: {
       pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
