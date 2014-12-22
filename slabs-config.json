@@ -1,6 +1,6 @@
 {
   "name" : "sample output slab",
-  "type" : "api",
+  "type" : "output",
   "connectionsIn" : 1,
   "connectionsOut" : 0
 }
