@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://rawgit.com/Eonasdan/bootstrap-datetimepicker/master/build/css/bootstrap-datetimepicker.min.css">
-
+    <style>
+        body{
+            padding:15px
+        }
+    </style>
 </head>
 <body>
 
@@ -46,7 +50,7 @@
             </select>
         </div>
 
-        <button type="button" class="btn btn-default" onclick="compileObject()">Done</button>
+        <button id="submit" type="button" class="btn btn-default" onclick="compileObject()">Done</button>
 
     </form>
 
@@ -54,6 +58,7 @@
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
     <script type="text/javascript" src="https://rawgit.com/Eonasdan/bootstrap-datetimepicker/master/src/js/bootstrap-datetimepicker.js"></script>
+    <script src="dist/slabs.io.js"></script>
     <script>
 
         $('#fromDate').datetimepicker({
@@ -63,19 +68,11 @@
             pickTime: false
         });
 
-        var compileObject = function (){
-            window.top.submitSlabData({name:"pie"});
-        };
+        $('#submit').click(function (){
+            slabs.send({name:"pie"});
+        });
 
     </script>
-
-    <style>
-
-        body{
-            padding:15px
-        }
-
-    </style>
 
 </body>
 </html>
