@@ -1,7 +1,7 @@
-/* global Highcharts:true */
+/* global Highcharts:false, slabs:false */
 
 // display the chart
-(function (obj) {
+slabs.getData().then(function (obj) {
     'use strict';
 
     // this are the data sent back from the server.
@@ -63,4 +63,4 @@
         }]
     });
 
-}(slabs.getData()));
+});
